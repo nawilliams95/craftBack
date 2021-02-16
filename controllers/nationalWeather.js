@@ -23,14 +23,14 @@ const DELETE_URL = process.env.DELETE_URL;
 ///THE MAIN FUNCTION/ TIMER
 ///////////////////////////////
 
-// const rule = new schedule.RecurrenceRule();
-// rule.minute = 48;
-// rule.tz = 'America/New_York'
+const rule = new schedule.RecurrenceRule();
+rule.minute = 05;
+rule.tz = 'America/New_York'
 
-// const dailyPull = schedule.scheduleJob(rule, function() {
-//     console.log('fetching new forecasts at: ' + formatAMPM());
-//     getLocationIds();
-// });
+const dailyPull = schedule.scheduleJob(rule, function() {
+    console.log('fetching new forecasts at: ' + formatAMPM());
+    getLocationIds();
+});
 
 // const rule2 = new schedule.RecurrenceRule();
 // rule.hour = 20;
